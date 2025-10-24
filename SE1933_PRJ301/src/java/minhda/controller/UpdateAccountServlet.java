@@ -37,8 +37,9 @@ public class UpdateAccountServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
         String url = ERROR_PAGE;
+        response.setContentType("text/html;charset=UTF-8");
+        
 
         // 1.get all user's info
         String username = request.getParameter("txtUsername");

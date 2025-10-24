@@ -34,10 +34,10 @@
                         <th>Role</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <c:forEach var="dto" items="${result}" varStatus="counter">
+
+                <c:forEach var="dto" items="${result}" varStatus="counter">
                     <form action="DispatcherServlet" method="POST">
-                                                <tr>
+                        <tr>
                             <td>
                                 ${counter.count}
                             </td>
@@ -77,26 +77,25 @@
                                        name="lastSearchValue" />
                             </td>
                         </tr>
-
                     </form>
-                    
-                </c:forEach>
-            </tbody>
-        </table>
 
-    </c:if>
-    <c:if test="${empty result}">
-        <h2>
-            <font color = "red">
-            Not found!!!!!
-            </font>
-        </h2>
-    </c:if>
-    <%-- <form action="MainController">
-         <input type="text" name="txtSearchValue" 
-                value="<%= request.getParameter("txtSearchValue")%>" />
-         <input type="submit" value="Search" name="btAction" />
-     </form><br/>
+                </c:forEach>
+
+            </table>
+
+        </c:if>
+        <c:if test="${empty result}">
+            <h2>
+                <font color = "red">
+                Not found!!!!!
+                </font>
+            </h2>
+        </c:if>
+        <%-- <form action="MainController">
+             <input type="text" name="txtSearchValue" 
+                    value="<%= request.getParameter("txtSearchValue")%>" />
+             <input type="submit" value="Search" name="btAction" />
+         </form><br/>
 
         <%
             String searchValue = request.getParameter("txtSearchValue");
@@ -165,5 +164,5 @@
             }//searchValue must be valid
         %> --%>
 
-</body>
+    </body>
 </html>

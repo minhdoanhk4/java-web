@@ -159,7 +159,7 @@ public class RegistrationDAO implements Serializable {
                 //2. model query data from DB
                 // 2.1. create sql string
                 String sql = "update Registration "
-                        + "set password =?, isAdmin = ?"
+                        + "set password = ?, isAdmin = ? "
                         + "where username = ?";
                 //2.2. 
                 stm = con.prepareStatement(sql);
